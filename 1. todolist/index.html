@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>ukss | Todo app</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="header-img" src="./images/bg-desktop-light.jpg" alt="background" />
+    </header>
+    <main class="main">
+      <section class="main-logo">
+        <h1 class="main-logo__title">TODO</h1>
+        <img class="main-logo__weather" src="./images/icon-sun.svg" alt="weather" />
+      </section>
+      <div>
+        <label for=""></label>
+        <input type="text" />
+      </div>
+      <div>
+        <ul>
+          <li>Complete online JavaScript course</li>
+          <li>Jog around the park 3x</li>
+          <li>10 minutes meditation</li>
+          <li>Read for 1 hour</li>
+          <li>Pick up groceries</li>
+          <li>Complete Todo App on Fronted Mentor</li>
+        </ul>
+      </div>
+      <div>
+        <span>5 items left</span>
+        <div>
+          <span>All</span>
+          <span>Active</span>
+          <span>Completed</span>
+        </div>
+        <span>Clear Completed</span>
+      </div>
+    </main>
+    <footer>
+      <div>Drag and drop to reorder list</div>
+    </footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">ukss</a>.
+    </div>
+  </body>
 </html>
