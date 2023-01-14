@@ -12,42 +12,97 @@
   </head>
   <body>
     <header class="header">
-      <img class="header-img" src="./images/bg-desktop-light.jpg" alt="background" />
+      <h1 class="header-logo">
+        <a href="#">T O D O</a>
+      </h1>
+      <div class="header-button">
+        <label for="toggle">다크 모드 전환</label>
+        <input id="toggle" type="button" class="header-button__toggle" />
+      </div>
     </header>
-    <main class="main">
-      <section class="main-logo">
-        <h1 class="main-logo__title">TODO</h1>
-        <img class="main-logo__weather" src="./images/icon-sun.svg" alt="weather" />
-      </section>
-      <div>
-        <label for=""></label>
-        <input type="text" />
-      </div>
-      <div>
-        <ul>
-          <li>Complete online JavaScript course</li>
-          <li>Jog around the park 3x</li>
-          <li>10 minutes meditation</li>
-          <li>Read for 1 hour</li>
-          <li>Pick up groceries</li>
-          <li>Complete Todo App on Fronted Mentor</li>
-        </ul>
-      </div>
-      <div>
-        <span>5 items left</span>
-        <div>
-          <span>All</span>
-          <span>Active</span>
-          <span>Completed</span>
+    <form action="#" class="form">
+      <h2 class="a11y-hidden">할일 추가</h2>
+      <fieldset>
+        <legend>할일</legend>
+        <div class="form-checkbox">
+          <label for="checkbox">체크박스</label>
+          <input id="checkbox" type="checkbox" />
         </div>
-        <span>Clear Completed</span>
-      </div>
+        <div class="form-input">
+          <label for="typing">할일 입력</label>
+          <input id="typing" type="text" />
+        </div>
+      </fieldset>
+    </form>
+    <main class="main">
+      <section class="todo">
+        <h2 class="a11y-hidden">할일 목록</h2>
+        <ul class="todo-lists">
+          <li class="todo-list">
+            <div class="todo-list__checkbox">
+              <label for="checkbox">체크박스</label>
+              <input id="checkbox" type="checkbox" />
+            </div>
+            <div class="todo-list__update">
+              <label for="update">할일</label>
+              <input id="update" type="text" />
+            </div>
+            <div class="todo-list__delete">
+              <label for="delete">삭제</label>
+              <input id="delete" type="button" />
+            </div>
+          </li>
+          <li class="todo-list">
+            <div class="todo-list__checkbox">
+              <label for="checkbox">체크박스</label>
+              <input id="checkbox" type="checkbox" />
+            </div>
+            <div class="todo-list__update">
+              <label for="update">할일</label>
+              <input id="update" type="text" />
+            </div>
+            <div class="todo-list__delete">
+              <label for="delete">삭제</label>
+              <input id="delete" type="button" />
+            </div>
+          </li>
+          <li class="todo-list">
+            <div class="todo-list__checkbox">
+              <label for="checkbox">체크박스</label>
+              <input id="checkbox" type="checkbox" />
+            </div>
+            <div class="todo-list__update">
+              <label for="update">할일</label>
+              <input id="update" type="text" />
+            </div>
+            <div class="todo-list__delete">
+              <label for="delete">삭제</label>
+              <input id="delete" type="button" />
+            </div>
+          </li>
+        </ul>
+        <div class="status">
+          <h2 class="a11y-hidden">할일 상태바</h2>
+          <span class="status-texts">3 items left</span>
+          <div class="status-buttons">
+            <div class="status-buttons__all">
+              <label for="all">모두 선택</label>
+              <input type="button" id="all" />
+            </div>
+            <div class="status-buttons__active">
+              <label for="active">미실행</label>
+              <input type="button" id="active" />
+            </div>
+            <div class="status-buttons__completed">
+              <label for="completed">완료</label>
+              <input type="button" id="completed" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <div>Drag and drop to reorder list</div>
+    <footer class="footer">
+      <span class="footer-texts">Drag and drop to reorder list</span>
     </footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">ukss</a>.
-    </div>
   </body>
 </html>
