@@ -1,16 +1,11 @@
-@import "./abstracts/_variables";
+@import "./abstracts/variables";
 
 @import "./base/normalize";
 @import "./base/reset";
 
-@import "./layout/_header";
-@import "./layout/_main";
+@import "./layout/header";
+@import "./layout/form";
+@import "./layout/main";
+@import "./layout/footer";
 
 /* Default Setting */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}

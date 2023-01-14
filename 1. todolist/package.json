@@ -1,0 +1,15 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "LIKELION-JS-STUDY-Project#1",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server index.html --host=localhost --port=5500 -no-browser"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "live-server": "^1.2.2"
+  },
+  "author": "ukss",
+  "license": "MIT"
+}
