@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { authService } from 'fbase';
 import { useNavigate } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
 
-const Profile = () => {
+const Profile = ({ userObj, refreshUser }) => {
   const navigate = useNavigate();
+  const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
+
   const onLogOutClick = () => {
     authService.signOut();
     navigate('/');
   };
+
+  const onChange = (e) => {
+    const {
+      target: { value },
+    } = e;
+    setNewDisplayName(value);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if (userObj.displayName !== newDisplayName) {
+      await updateProfile(authService.currentUser, { displayName: newDisplayName });
+      refreshUser();
+    }
+  };
+
   return (
     <>
+      <form onSubmit={onSubmit}>
+        <input type='text' onChange={onChange} placeholder='Display Name' value={newDisplayName} />
+        <input type='submit' value='Update Profile' />
+      </form>
       <button onClick={onLogOutClick}>Log Out</button>
     </>
   );
